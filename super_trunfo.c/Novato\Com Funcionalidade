@@ -7,7 +7,7 @@ int main (){
     float area01, area02, pib01, pib02, densidade01, densidade02, pib_per_capita01, pib_per_capita02;
 
 
-    printf("----Bem vindo ao Super Trunfo do Higor!!----\n");
+    printf("\n----Bem vindo ao Super Trunfo do Higor!!----\n");
 
    
     printf("\n---- CARTA 1 ----\n");
@@ -63,7 +63,7 @@ int main (){
     printf("Densidade populacional: %.2f hab/km²\n", densidade01);
     printf("PIB per Capita: %.2f\n", pib_per_capita01);
 
-    printf("---- CARTA 2 ----\n");
+    printf("\n---- CARTA 2 ----\n");
     printf("Estado: %s\n", estado02);
     printf("Código da carta: %s\n", codigoA02);
     printf("Nome da cidade: %s\n", cidade02);
@@ -77,4 +77,4 @@ int main (){
 
     return 0;
 }
-}
+
