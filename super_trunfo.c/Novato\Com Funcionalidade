@@ -89,5 +89,34 @@ printf("DENSIDADE POPULACIONAL: %.2f hab/km²\n", dens02);
 printf("PIB PER CAPITA: %.2f reais\n", pib_per_capita02);
 printf("O Super Poder da Carta 02 é: %f \n", superpoder2);
 
+
+printf("======>Declarações finais: Comparação de Cartas<======\n");
+
+int r = (carta01>carta02) ? 1 : 0;
+
+r = (hab01 > hab02);
+printf("População: Carta %d venceu!(%d)\n", r ? 1:2,r);
+r = (area01 > area02);
+printf("Área: Carta %d venceu!(%d)\n", r ? 1:2,r);
+r = (pib01 > pib02);
+printf("PIB: Carta %d venceu!(%d)\n", r  ? 1:2,r);
+r = (pontos01 > pontos02);
+printf("Pontos turísticos: Carta %d venceu(%d)!\n", r  ? 1:2,r);
+r = (dens01 > dens02);
+printf("Densidade populacional: Carta %d venceu!(%d)\n", r  ? 1:2,r);
+r = (pib_per_capita01 > pib_per_capita02);
+printf("Pib Per Capita: Carta %d venceu!(%d)\n", r  ? 1:2,r);
+r = (superpoder1 > superpoder2);
+printf("SuperPoder: Carta %d venceu!(%d)\n", r  ? 1:2,r);
+
+
+
+
+
+
+
+
+
 return 0;
+
 }
