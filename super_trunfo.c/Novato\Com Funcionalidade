@@ -3,10 +3,14 @@
 
 int main (){
 
-char estado01[20], estado02[20], A01[4], A02[4], cidade01[30], cidade02[30];
+char estado01[20], estado02[20], A01[4], A02[4], cidade01[30], cidade02[30], carta01, carta02;
 float  pib01, pib02, area01, area02;
-float dens01, dens02, pib_per_capita01, pib_per_capita02;
-int pontos01, pontos02, hab01, hab02;
+float dens01, dens02, pib_per_capita01, pib_per_capita02, superpoder1, superpoder2;
+int pontos01, pontos02, vitoria01, vitoria02;
+unsigned long int hab01, hab02;
+
+
+
 
 
 printf("---------Bem-Vindo ao SuperTrunfo do Higor!------------\n");
@@ -26,10 +30,14 @@ scanf("%f", &pib01);
 printf("Quantidade de pontos turisticos:\n");
 scanf("%d", &pontos01);
 printf("Quantidade de Habitantes:\n");
-scanf("%d", &hab01);
+scanf("%lu", &hab01);
 
 dens01 = (float)(hab01 / area01);
 pib_per_capita01 = (float)(pib01 / hab01);
+superpoder1 = (float) (hab01 + area01 + pontos01 + pib_per_capita01) + hab01 / area01;
+
+
+
 
 printf("=-=-=-=-=-<<Digite as Informações da carta 2:>>-=-=-=-=-=\n");
 
@@ -46,22 +54,28 @@ scanf("%f", &pib02);
 printf("Quantidade de pontos turisticos:\n");
 scanf("%d", &pontos02);
 printf("Quantidade de Habitantes:\n");
-scanf("%d", &hab02);
+scanf("%lu", &hab02);
 
 
 dens02 = (float)(hab02 / area02);
 pib_per_capita02 = (float)(pib02 / hab02);
+superpoder2 = (float) (hab02 + area02 + pontos02 + pib_per_capita02) + hab02 / area02;
+
+
+
+
 
 printf("-------Resultados da carta 01-------\n");
 printf("ESTADO: %s\n", estado01);
 printf("CÓDIGO: %s\n", A01);
 printf("NOME DA CIDADE: %s\n", cidade01);
-printf("POPULAÇÃO:%d\n", hab01);
+printf("POPULAÇÃO:%d\n", hab01);                                     
 printf("ÁREA: %.2f KM²\n", area01);
 printf("PIB: %.2f Bilhões de reais\n", pib01);
 printf("NÚMERO DE PONTOS TURÍSTICOS: %d\n", pontos01);
 printf("DENSIDADE POPULACIONAL: %.2f hab/km²\n", dens01);
 printf("PIB PER CAPITA: %.2f reais\n", pib_per_capita01);
+printf("O Super Poder da Carta 01 é: %f \n", superpoder1);
 
 printf("-------Resultados da carta 02-------\n");
 printf("ESTADO: %s\n", estado02);
@@ -73,13 +87,7 @@ printf("PIB %.2f Bilhões de reais:\n", pib02);
 printf("NÚMERO DE PONTOS TURÍSTICOS: %d\n", pontos02);
 printf("DENSIDADE POPULACIONAL: %.2f hab/km²\n", dens02);
 printf("PIB PER CAPITA: %.2f reais\n", pib_per_capita02);
-
-
-
+printf("O Super Poder da Carta 02 é: %f \n", superpoder2);
 
 return 0;
-
-
-
-
 }
