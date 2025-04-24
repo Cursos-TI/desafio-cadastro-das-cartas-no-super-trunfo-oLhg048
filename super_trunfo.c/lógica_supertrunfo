@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+int main() {
+
+    char estado01[20], estado02[20], A01[4], A02[4], cidade01[30], cidade02[30];
+    float pib01, pib02, area01, area02;
+    int pontos01, pontos02;
+    unsigned long int hab01, hab02;
+    float dens01, dens02, pib_per_capita01, pib_per_capita02;
+    
+    // Cadastro da carta 1
+    printf("---------Bem-Vindo ao SuperTrunfo do Higor!------------\n");
+    printf("=-=-=-=-=-<<Digite as Informações da carta 1:>>-=-=-=-=-=\n");
+    
+    printf("Digite o Nome do Estado:\n");
+    scanf("%s", estado01);
+    printf("Digite o código da carta:\n");
+    scanf("%s", A01);
+    printf("Digite o nome da Cidade:\n");
+    scanf("%s", cidade01);
+    printf("Digite o tamanho da Área em KM:\n");
+    scanf("%f", &area01);
+    printf("Digite o PIB:\n");
+    scanf("%f", &pib01);
+    printf("Quantidade de pontos turisticos:\n");
+    scanf("%d", &pontos01);
+    printf("Quantidade de Habitantes:\n");
+    scanf("%lu", &hab01);
+
+    // Calculando a densidade populacional e PIB per capita para carta 1
+    dens01 = hab01 / area01;
+    pib_per_capita01 = pib01 / hab01;
+
+    // Cadastro da carta 2
+    printf("=-=-=-=-=-<<Digite as Informações da carta 2:>>-=-=-=-=-=\n");
+    
+    printf("Digite o Nome do Estado:\n");
+    scanf("%s", estado02);
+    printf("Digite o código da carta:\n");
+    scanf("%s", A02);
+    printf("Digite o nome da Cidade:\n");
+    scanf("%s", cidade02);
+    printf("Digite o tamanho da Área em KM:\n");
+    scanf("%f", &area02);
+    printf("Digite o PIB:\n");
+    scanf("%f", &pib02);
+    printf("Quantidade de pontos turisticos:\n");
+    scanf("%d", &pontos02);
+    printf("Quantidade de Habitantes:\n");
+    scanf("%lu", &hab02);
+
+    // Calculando a densidade populacional e PIB per capita para carta 2
+    dens02 = hab02 / area02;
+    pib_per_capita02 = pib02 / hab02;
+
+    // Comparação de um único atributo: População
+    printf("\n======> Comparação de Cartas (Atributo: População) <======\n");
+    printf("Carta 1 - Estado: %s, Cidade: %s, População: %lu\n", estado01, cidade01, hab01);
+    printf("Carta 2 - Estado: %s, Cidade: %s, População: %lu\n", estado02, cidade02, hab02);
+    
+    if (hab01 > hab02) {
+        printf("Resultado: Carta 1 (Estado: %s, Cidade: %s) venceu! População maior: %lu\n", estado01, cidade01, hab01);
+    } else if (hab02 > hab01) {
+        printf("Resultado: Carta 2 (Estado: %s, Cidade: %s) venceu! População maior: %lu\n", estado02, cidade02, hab02);
+    } else {
+        printf("Resultado: Empate! Ambas as cartas têm a mesma população: %lu\n", hab01);
+    }
+
+    return 0;
+}
